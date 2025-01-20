@@ -35,15 +35,33 @@
 
 .container a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
-.main-header a {
+.main-header ul li a {
     text-decoration: none;
+    font-size: 18px;
     color: black;
-}
+    position: relative;
+    padding: 10px;
+  }
+.main-header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00; 
+    transition: width 0.3s ease; 
+  }
+  
+  /* Hover effect */
+  .main-header ul li a:hover::after {
+    width: 100%; 
+  }
 
-.container a:hover {
+.card-container a:hover {
     text-decoration: underline;
 }
 
@@ -51,7 +69,6 @@
     border-radius: 3px;
     padding: 3rem;
     width: 100%;
-    /* background-color: #e9f2ed; */
     /* background: linear-gradient(90deg, rgb(154, 149, 250) 0%, rgb(82, 82, 216) 35%, rgb(140, 233, 252) 100%); */
     /* background: linear-gradient(90deg, rgb(243, 181, 124) 0%, rgb(245, 129, 114) 35%, rgb(90, 168, 184) 100%); */
     background: linear-gradient(90deg,rgba(243, 181, 124, 0.938) 0%, rgba(248, 140, 126, 0.788) 35%, rgba(98, 203, 224, 0.493) 100%);
